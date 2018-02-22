@@ -59,15 +59,10 @@ public class MainActivity extends AppCompatActivity {
         db = FirebaseDatabase.getInstance();
         user = db.getReference("Riders");
         rootLayout = (RelativeLayout) findViewById(R.id.rootLayout);
-        setBtnregister();
-        setBtnSingIn();
 
         btnRegister = (Button) findViewById(R.id.buttonRegister);
         btnSingIn = (Button) findViewById(R.id.buttomSingIn);
 
-    }
-
-    private void setBtnregister(){
 
         Button btnRegister = (Button) findViewById(R.id.buttonRegister);
 
@@ -78,8 +73,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
-    private void setBtnSingIn(){
         btnSingIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     private void showRegisterDialog() {

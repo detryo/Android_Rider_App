@@ -23,83 +23,73 @@
     <include layout="@layout/content_home" />
 
     <android.support.v7.widget.CardView
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="70dp"
         app:cardElevation="10dp">
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:weightSum="6"
                 android:orientation="horizontal"
-                android:weightSum="6">
-
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="0dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_pin_drop_black_24dp" />
+                    android:src="@drawable/ic_pin_drop_black_24dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
 
                 <fragment
                     android:id="@+id/place_location"
-                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                    android:layout_weight="5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5" />
+                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"/>
+
 
             </LinearLayout>
 
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@color/driverColor" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/driverColor"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:weightSum="6"
                 android:orientation="horizontal"
-                android:weightSum="6">
-
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_map_black_24dp" />
+                    android:src="@drawable/ic_map_black_24dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
 
                 <fragment
                     android:id="@+id/place_destination"
-                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                    android:layout_weight="5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5" />
+                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"/>
+
 
             </LinearLayout>
 
+
         </LinearLayout>
 
-    </android.support.v7.widget.CardView>
 
+    </android.support.v7.widget.CardView>
 </android.support.design.widget.CoordinatorLayout>
